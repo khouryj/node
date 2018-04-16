@@ -1,0 +1,7 @@
+C:\Users\eahscs\Documents\GitHub\node\dulanclaymold\dulanclaymold\bin\Debug\dulanclaymold.exe.config
+C:\Users\eahscs\Documents\GitHub\node\dulanclaymold\dulanclaymold\bin\Debug\dulanclaymold.exe
+C:\Users\eahscs\Documents\GitHub\node\dulanclaymold\dulanclaymold\bin\Debug\dulanclaymold.pdb
+C:\Users\eahscs\Documents\GitHub\node\dulanclaymold\dulanclaymold\obj\Debug\dulanclaymold.csprojResolveAssemblyReference.cache
+C:\Users\eahscs\Documents\GitHub\node\dulanclaymold\dulanclaymold\obj\Debug\dulanclaymold.csproj.CoreCompileInputs.cache
+C:\Users\eahscs\Documents\GitHub\node\dulanclaymold\dulanclaymold\obj\Debug\dulanclaymold.exe
+C:\Users\eahscs\Documents\GitHub\node\dulanclaymold\dulanclaymold\obj\Debug\dulanclaymold.pdb
