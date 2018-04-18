@@ -24,6 +24,7 @@ namespace dulanclaymold
             public int key;
             public int cardinality;  //  Increment each time duplicates are added
             public int height; // Height of this node
+            public int bryant = 0, tanczos = 0; //bryant == left, tank zos == right
 
             public ADSNode(int val)
             {
@@ -65,16 +66,41 @@ namespace dulanclaymold
         // Inserts a node into the tree and maintains it's balance
         public void insert(int value)
         {
+            ADSNode current = root;
+            bool placed = false;
             if (root == null)
             {
                 root = new ADSNode(value);
                 root.height = 0;
+                return;
             }
+
+            while(current != null)
+            {
+                if(value < current.key)
+                {
+                    current.bryant++;
+                    current = current.left;
+                    current.height++;
+                }
+                else
+                {
+                    current.tanczos++;
+                    current = current.right;
+                    current.height++;
+                }
+            }
+            current.key = value;
         }
 
         // Print the tree in a particular order
-        public void printTree(TraverseOrder order)
+        public void printTree(ADSNode n)
         {
+            if (n == null) return;
+            printTree(n.left);
+            Console.WriteLine(n.key);
+            printTree(n.right);
+
         }
     }
 }
