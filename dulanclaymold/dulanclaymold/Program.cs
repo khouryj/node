@@ -67,7 +67,7 @@ namespace dulanclaymold
         public void insert(int value)
         {
             ADSNode current = root;
-            bool placed = false;
+            //bool placed = false;
             if (root == null)
             {
                 root = new ADSNode(value);
@@ -91,6 +91,27 @@ namespace dulanclaymold
                 }
             }
             current.key = value;
+
+            while ()
+            {
+                if (current.bryant - current.tanczos >= 2) //LL
+                {
+                    
+                }
+                if(current.tanczos - current.bryant >= 2) //RR
+                {
+
+                }
+                if(current.tanczos - current.bryant >= 2) //RL
+                {
+
+                }
+                if(current.bryant - current.tanczos >= 2) //LR
+                {
+
+                }
+            }
+            
         }
 
         // Print the tree in a particular order
