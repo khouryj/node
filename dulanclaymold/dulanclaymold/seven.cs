@@ -23,7 +23,7 @@ namespace dulanclaymold
             t.insert(63);
             t.insert(50);
 
-            t.printTree(TraverseOrder.InOrder);
+            t.printTree(t.root, TraverseOrder.InOrder);
         }
     }
 }

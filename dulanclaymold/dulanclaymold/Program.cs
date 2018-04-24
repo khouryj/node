@@ -15,7 +15,7 @@ namespace dulanclaymold
 
     public class ADSTree
     {
-        private ADSNode root;
+        public ADSNode root;
 
         public sealed class ADSNode
         {
@@ -29,6 +29,7 @@ namespace dulanclaymold
             public ADSNode(int val)
             {
                 key = val;
+                height = 0;
             }
         }
 
@@ -81,47 +82,45 @@ namespace dulanclaymold
                 {
                     current.bryant++;
                     current = current.left;
-                    current.height++;
                 }
                 else
                 {
                     current.tanczos++;
                     current = current.right;
-                    current.height++;
                 }
             }
-            current.key = value;
+            current = new ADSNode(value);
 
-            while ()
+            /*while ()
             {
                 if (current.bryant - current.tanczos >= 2) //LL
                 {
-                    
+                    if (current.bryant - current.tanczos >= 2) //LR
+                    {
+
+                    }
                 }
                 if(current.tanczos - current.bryant >= 2) //RR
                 {
+                    if () //RL
+                    {
 
+                    }
                 }
-                if(current.tanczos - current.bryant >= 2) //RL
-                {
-
-                }
-                if(current.bryant - current.tanczos >= 2) //LR
-                {
-
-                }
-            }
+               
+            }*/
             
         }
 
         // Print the tree in a particular order
-        public void printTree(ADSNode n)
+        public void printTree(ADSNode n, TraverseOrder order)
         {
             if (n == null) return;
-            printTree(n.left);
-            Console.WriteLine(n.key);
-            printTree(n.right);
-
+            if (order == TraverseOrder.PreOrder) Console.WriteLine(n.key);
+            printTree(n.left, order);
+            if (order == TraverseOrder.InOrder) Console.WriteLine(n.key);
+            printTree(n.right, order);
+            if (order == TraverseOrder.PostOrder) Console.WriteLine(n.key);
         }
     }
 }
